@@ -51,7 +51,7 @@
 	var events = __webpack_require__(4);
 	var fileName = location.pathname.split('/').slice(-1)[0];
 	__webpack_require__(5);
-	__webpack_require__(9);
+	__webpack_require__(8);
 
 	$(document).ready(function () {
 	  renderData(fileName);
@@ -643,10 +643,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(6);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!../node_modules/css-loader/index.js!../node_modules/sass-loader/index.js!./foods.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(8)(content, {});
+	var update = __webpack_require__(7)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -663,77 +663,8 @@
 	}
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(7)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".food-headers, .food-item-row {\n  width: 300px;\n  display: flex;\n  justify-content: space-between; }\n\n.food-headers, .food-item-row {\n  height: 25px;\n  margin: 0px;\n  display: flex;\n  align-items: center; }\n\n.food-headers .name-header, .food-headers .calorie-header {\n  border: 1px solid black;\n  background-color: lightgrey;\n  padding-left: 5px; }\n\n.food-headers .name-header {\n  width: 200px; }\n\n.food-headers .calorie-header {\n  width: 60px;\n  padding-right: 5px;\n  border-left: 0px; }\n\n.food-headers .hidden {\n  width: 50px; }\n\n.food-item-row .food-item-name {\n  width: 200px; }\n\n.food-item-row .food-item-calories {\n  width: 50px; }\n\n.food-item-row .button-container {\n  width: 25px; }\n  .food-item-row .button-container .food-item-delete-btn {\n    color: white;\n    height: 20px;\n    width: 20px;\n    border: 1px solid tomato;\n    border-radius: 30px;\n    background-color: tomato;\n    text-align: center; }\n\n#name-notice {\n  display: none;\n  color: tomato; }\n\n#calories-notice {\n  display: none;\n  color: tomato; }\n\n#food-filter-input {\n  width: 243px;\n  display: flex;\n  flex-direction: column; }\n\n.food-name-container input {\n  width: 243px;\n  display: flex;\n  flex-direction: column; }\n\n.food-calories-container input {\n  width: 243px;\n  display: flex;\n  flex-direction: column; }\n\nbody {\n  display: flex;\n  justify-content: center; }\n", ""]);
-
-	// exports
-
-
-/***/ }),
+/* 6 */,
 /* 7 */
-/***/ (function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ }),
-/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -985,16 +916,16 @@
 
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(10);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!../node_modules/css-loader/index.js!../node_modules/sass-loader/index.js!./diary.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(8)(content, {});
+	var update = __webpack_require__(7)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1009,20 +940,6 @@
 		// When the module is disposed, remove the <style> tags
 		module.hot.dispose(function() { update(); });
 	}
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(7)();
-	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Montserrat);", ""]);
-
-	// module
-	exports.push([module.id, "body {\n  font-family: 'Montserrat', sans-serif; }\n\nh3, h4 {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  font-weight: 100; }\n\ninput {\n  padding-left: 10px; }\n\n.breakfast-table {\n  width: 300px; }\n\n.meals-container {\n  display: flex; }\n  .meals-container .meal-table {\n    padding: 20px; }\n\n.total-calories, .remaining-calories .remaining-calories-header, .remaining-calories .total-remaining-calories, .remaining-calories .diary-total-remaining-calories {\n  border: 1px solid black;\n  background-color: lightgrey;\n  padding-left: 5px; }\n\n.remaining-calories {\n  height: 25px;\n  margin: 0px;\n  display: flex;\n  align-items: center; }\n\n.remaining-calories .remaining-calories-header, .remaining-calories .total-remaining-calories, .remaining-calories .diary-total-remaining-calories, .calories-goal, .diary-total-calories-consumed {\n  display: flex;\n  justify-content: flex-end;\n  padding-right: 5px; }\n\n.total-calories {\n  display: flex;\n  height: 25px;\n  align-items: center;\n  justify-content: space-between;\n  width: 248px; }\n\n.calories-total-amount {\n  padding-right: 5px; }\n\n.positive-remainder {\n  color: #009600; }\n\n.negative-remainder {\n  color: tomato; }\n\n.remaining-calories .remaining-calories-header, .remaining-calories .total-remaining-calories, .remaining-calories .diary-total-remaining-calories {\n  height: 11px;\n  padding-top: 4px;\n  padding-bottom: 9px; }\n\n.remaining-calories {\n  width: 255px; }\n  .remaining-calories .remaining-calories-header {\n    width: 100%;\n    border-top: 0; }\n  .remaining-calories .total-remaining-calories, .remaining-calories .diary-total-remaining-calories {\n    width: 50px;\n    border-left: 0;\n    border-top: 0; }\n\n.calories-consumed {\n  border-top: none; }\n\n.default-button {\n  background-color: #56ccf2;\n  height: 30px;\n  width: 110px;\n  border: 1px solid black;\n  border-radius: 30px;\n  font-weight: bold;\n  margin-top: 5px;\n  margin-bottom: 5px; }\n\n.food-diary-controls {\n  width: 254px;\n  padding-left: 20px; }\n  .food-diary-controls .meal-add-buttons {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    margin-top: 10px;\n    margin-bottom: 10px; }\n  .food-diary-controls .button-row-1, .food-diary-controls .button-row-2 {\n    width: 100%;\n    display: flex;\n    justify-content: space-between; }\n\n.diary-total-calories-container {\n  padding-left: 20px; }\n\n#food-name-filter input, .food-name-container input, .food-calories-container input {\n  height: 20px;\n  border-radius: 20px;\n  border: 1px solid black;\n  margin-top: 5px;\n  margin-bottom: 5px; }\n", ""]);
-
-	// exports
-
 
 /***/ })
 /******/ ]);
